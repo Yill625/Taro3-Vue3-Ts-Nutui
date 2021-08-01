@@ -49,11 +49,11 @@ export default {
   props: {},
   setup() {
     const handleClick = () => {
-      console.log('触发点击头像');
-    };
-    return { handleClick };
+      console.log('触发点击头像')
+    }
+    return { handleClick }
   }
-};
+}
 </script>
 <style lang="scss">
 .nut-cell {
