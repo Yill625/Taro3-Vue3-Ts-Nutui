@@ -32,29 +32,31 @@
 </template>
 <script lang="ts">
 export default {
-  name: "NutUI",
+  name: 'NutUI',
   onShareAppMessage() {
     // console.log(state.nav)
 
     return {
       title: '1111',
-      path: "/pages/index/index",
+      path: '/pages/index/index'
     }
-  },
+  }
 }
 </script>
 <script lang="ts" setup>
-import { reactive, toRefs } from "vue"
-import { nav } from "./config.json"
-import Taro from "@tarojs/taro"
+import { reactive, toRefs } from 'vue'
+import { nav } from './config.json'
+import Taro from '@tarojs/taro'
 
 const state = reactive({
-  nav,
+  nav
 })
-
+const number = undefined
+console.log(number ?? 1)
+console.log(state?.nav)
 const navigateTo = (name, enName) => {
   Taro.navigateTo({
-    url: `/${enName}/pages/${name}/index`,
+    url: `/${enName}/pages/${name}/index`
   })
 }
 </script>
